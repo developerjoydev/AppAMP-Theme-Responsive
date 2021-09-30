@@ -230,7 +230,7 @@
     }
 }
 /* ======================== Style.css ======================  */
-.header-manu span  {
+.humba span  {
     display: none !important;
 }
 .testimonial-about::before {
@@ -246,6 +246,9 @@
     right: 0;
     margin: 0 auto;
 }
+.humba-manu-check{
+    display: none;
+}
 
 
 @media (max-width:768px){
@@ -256,11 +259,7 @@
     .bg-header {
         position: inherit !important;
     }
-    .header-manu ul {
-        opacity: 0 !important;
-        visibility: hidden !important;
-        height: 0 !important;
-    }
+
     .header-btn {
         width: 191px !important;
         position: absolute !important;
@@ -270,12 +269,7 @@
     .header-manu {
         width: 100% !important;
     }
-    .header-manu span {
-        font-size: 35px !important;
-        color: #6278df !important;
-        cursor: pointer !important;
-        display: block !important;
-    }
+  
     .banner-section {
         padding: 184px 0 72px !important;
     }
@@ -317,7 +311,60 @@
         width: 100% !important;
         margin-top: 18px !important;
     }
+/* humba menu */
+.humba span {
+    font-size: 35px !important;
+    color: #6278df !important;
+    cursor: pointer !important;
+    display: block !important;
 }
+.header-manu ul {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+}
+.header-manu .humba-manu-check:checked ~ ul {
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: 100% !important;
+}
+.header-manu ul li {
+	display: block;
+}
+.header-manu ul li a {
+	line-height: 49px !important;
+}
+.header-manu ul li ul {
+
+	top: -13px;
+	left: 47%;
+    right: 30px;
+}
+.header-manu ul li:hover ul {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.header-manu ul li ul li {
+	background: #fff;
+}
+.humba-manu-check {
+	width: 42px;
+	height: 41px;
+	margin-bottom: 6px;
+	opacity: 0;
+    display: block;
+}
+.humba span {
+	position: absolute;
+	left: 25px;
+	top: 61px;
+	pointer-events: none;
+}
+}
+
+
+
+
 @media (max-width:630px){
     .service-section-title h1 {
         font-size: 25px !important;
